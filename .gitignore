@@ -1,3 +1,4 @@
 .meteor/local
 packages
 smart.lock
+.idea
