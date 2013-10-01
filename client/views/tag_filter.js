@@ -1,5 +1,6 @@
 /////////////////////////////////// HELPERS //////////////////////////////////////////
 Template.tag_filter.helpers({
+    // needs to be refactored ???
     tags: function () {
         var tag_infos = [];
         var total_count = 0;
