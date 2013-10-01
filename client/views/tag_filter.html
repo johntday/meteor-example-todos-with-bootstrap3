@@ -1,0 +1,17 @@
+<template name="tag_filter">
+    <ul id="tag-filter" class="nav nav-pills nav-stacked hidden-sm hidden-xs">
+        {{#each tags}}
+        <li class="tag {{selected}}">
+            <a href="#">{{tag_text}} <span class="count badge">{{count}}</span></a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <ul id="tag-filter-small" class="visible-sm visible-xs">
+        {{#each tags}}
+        <li class="tag {{selected}}">
+            <a href="#">{{tag_text}} ({{count}})</a>
+        </li>
+        {{/each}}
+    </ul>
+</template>

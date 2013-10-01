@@ -1,65 +1,41 @@
 # meteor todos example with bootstrap3
 
-This is the updated source code from meteor's todos example.
-It was worked out as a showcase to check out how to use bootstrap3 for frontend
-elements instead of _old-style_ web layout.
+forked from https://github.com/4commerce-technologies-AG/meteor-example-todos-with-bootstrap3
 
-Please checkout also smaller displays like phones and tablets for minimized
-menu layout.
+## Installation
 
-This app was done on meteor 0.6.5.1
+1. node
 
+[Installing node.js on Ubuntu](http://lucidservices.com/2013/09/17/install-node-on-ubuntu/)
 
-## Live demo
-
-You will find the live demonstration of this at
-
-* http://todos-example-with-bootstrap3.meteor.com
-
-
-## Installation 
-
-### pre-requisites on your system
-
-1. node.js
-1. npm
-1. mongodb
-
-
-### meteor
+1. meteor
 
 ```
 $ curl https://install.meteor.com | /bin/sh
 ```
 
-
-### meteorite
+1. meteorite
 
 ```
 $ sudo npm install -g meteorite
 ```
 
-_It is preferred to install this as a global npm package_
-
-
-### this example :-)
+1. todo example
 
 ```
-$ git clone https://github.com/4commerce-technologies-AG/meteor-example-todos-with-bootstrap3.git todos
+$ git clone https://github.com/johntday/meteor-example-todos-with-bootstrap3.git
 ``` 
 
-
-## Run the example
+## Run todo example
 
 ```
-$ cd todos
+$ cd meteor-example-todos-with-bootstrap3
 $ mrt
 ```
 
-
 ## References
 
-* http://www.meteor.com
-* http://oortcloud.github.io/meteorite
-* http://getbootstrap.com
-* http://todos-example-with-bootstrap3.meteor.com
+* [meteor home](http://www.meteor.com)
+* [meteorite home](http://oortcloud.github.io/meteorite)
+* [Bootstrap](http://getbootstrap.com)
+

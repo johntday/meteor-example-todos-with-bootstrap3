@@ -1,0 +1,21 @@
+<template name="todos">
+    {{#if any_list_selected}}
+    <div id="items-view">
+        {{#if loading}}
+        Loading...
+        {{else}}
+        <div id="new-todo-box" class="input-group">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-plus-sign icon"></span>
+          </span>
+            <input type="text" id="new-todo" class="form-control" placeholder="New item" />
+        </div>
+        <ul id="item-list">
+            {{#each todos}}
+            {{> todo_item}}
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+    {{/if}}
+</template>

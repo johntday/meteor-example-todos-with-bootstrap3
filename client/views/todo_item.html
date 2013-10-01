@@ -1,0 +1,39 @@
+<template name="todo_item">
+    <li class="todo {{done_class}}">
+        <div class="input-group">
+      <span class="input-group-addon">
+        <a class="check {{done_class}}" href="#" name="markdone"><span class="glyphicon glyphicon-ok"></span></a>
+      </span>
+            {{#if editing}}
+            <div class="edit">
+                <input id="todo-input" class="form-control" type="text" value="{{text}}" />
+            </div>
+            {{else}}
+            <div class="display form-control">
+                <div class="todo-text">{{text}}</div>
+            </div>
+            {{/if}}
+      <span class="input-group-addon">
+        <a class="destroy" href="#"><span class="glyphicon glyphicon-remove-sign"></span></a>
+    </span>
+        </div>
+        <div class="item-tags">
+            {{#each tag_objs}}
+        <span class="tag removable_tag label">
+          <span class="glyphicon glyphicon-tag icon"></span>
+          {{tag}}
+          <a class="remove" href="#"><span class="glyphicon glyphicon-remove"></span></a>
+        </span>
+            {{/each}}
+            {{#if adding_tag}}
+        <span class="edittag tag label">
+          <input type="text" id="edittag-input" value="" />
+        </span>
+            {{else}}
+        <span class="tag label">
+          <a class="addtag" href="#"><span class="glyphicon glyphicon-plus"></span> Tag</a>
+        </span>
+            {{/if}}
+        </div>
+    </li>
+</template>

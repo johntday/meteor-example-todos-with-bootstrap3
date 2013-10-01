@@ -1,0 +1,40 @@
+<template name="lists">
+    <nav id="lists" class="navbar navbar-inverse navbar-static-top lists" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Todo Lists</a>
+            </div>
+            {{#if loading}}
+            <div id="lists">Loading...</div>
+            {{else}}
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    {{#each lists}}
+                    <li class="list {{selected}}">
+                        {{#if editing}}
+                        <div class="navbar-form">
+                            <input class="list-name-input form-control form-inline" id="list-name-input" type="text" value="{{name}}" />
+                        </div>
+                        {{else}}
+                        <a class="list-name {{name_class}}" href="/{{_id}}">
+                            <span class="glyphicon glyphicon-check"></span>
+                            {{name}}
+                        </a>
+                        {{/if}}
+                    </li>
+                    {{/each}}
+                    <li id="createList" class="navbar-form navbar-left">
+                        <input type="text" class="form-control form-inline" id="new-list" placeholder="New list" />
+                    </li>
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+    </nav>
+</template>
