@@ -53,12 +53,12 @@ Template.lists.events({
     'dblclick .list': function (evt, tmpl) { // start editing list name
         Session.set('editing_listname', this._id);
         Deps.flush(); // force DOM redraw, so we can focus the edit field
-        commonClient.activateInput(tmpl.find("#list-name-input"));
+        Meteor.MyClientModule.activateInput(tmpl.find("#list-name-input"));
     }
 });
 
 // Attach events to keydown, keyup, and blur on "New list" input box.
-Template.lists.events(commonClient.okCancelEvents(
+Template.lists.events(Meteor.MyClientModule.okCancelEvents(
     '#new-list',
     {
         ok: function (text, evt) {
@@ -68,7 +68,7 @@ Template.lists.events(commonClient.okCancelEvents(
         }
     }));
 
-Template.lists.events(commonClient.okCancelEvents(
+Template.lists.events(Meteor.MyClientModule.okCancelEvents(
     '#list-name-input',
     {
         ok: function (value) {

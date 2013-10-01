@@ -56,13 +56,13 @@ Template.todo_item.events({
     'click .addtag': function (evt, tmpl) {
         Session.set('editing_addtag', this._id);
         Deps.flush(); // update DOM before focus
-        commonClient.activateInput(tmpl.find("#edittag-input"));
+        Meteor.MyClientModule.activateInput(tmpl.find("#edittag-input"));
     },
 
     'dblclick .display .todo-text': function (evt, tmpl) {
         Session.set('editing_itemname', this._id);
         Deps.flush(); // update DOM before focus
-        commonClient.activateInput(tmpl.find("#todo-input"));
+        Meteor.MyClientModule.activateInput(tmpl.find("#todo-input"));
     },
 
     'click .remove': function (evt) {
@@ -77,7 +77,7 @@ Template.todo_item.events({
     }
 });
 
-Template.todo_item.events(commonClient.okCancelEvents(
+Template.todo_item.events(Meteor.MyClientModule.okCancelEvents(
     '#todo-input',
     {
         ok: function (value) {
@@ -89,7 +89,7 @@ Template.todo_item.events(commonClient.okCancelEvents(
         }
     }));
 
-Template.todo_item.events(commonClient.okCancelEvents(
+Template.todo_item.events(Meteor.MyClientModule.okCancelEvents(
     '#edittag-input',
     {
         ok: function (value) {

@@ -50,7 +50,7 @@ Template.todos.helpers({
 //};
 
 //////////////////////////////////////// EVENTS ////////////////////////////////////////
-Template.todos.events(commonClient.okCancelEvents(
+Template.todos.events(Meteor.MyClientModule.okCancelEvents(
   '#new-todo',
   {
     ok: function (text, evt) {
